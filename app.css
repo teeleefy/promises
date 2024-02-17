@@ -1,0 +1,9 @@
+body {
+    background-color: green;
+}
+
+.card {
+    position: absolute;
+    top: 115px;
+    left: 300px;
+}
