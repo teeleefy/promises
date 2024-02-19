@@ -19,9 +19,9 @@ newDeck.then(data => {
         for (let i = 1; i < 3; i++){
         twoPromises.push(axios.get(`https://deckofcardsapi.com/api/deck/${data.data.deck_id}/draw/?count=1`))};console.log(twoPromises);
         Promise.all(twoPromises)
-        .then(numArr => (
-            numArr.forEach(data => console.log(`${data.data.cards[0].value} of ${data.data.cards[0].suit}`))))
-            .catch(err => console.log(err));
+            .then(numArr => (
+                numArr.forEach(data => console.log(`${data.data.cards[0].value} of ${data.data.cards[0].suit}`))))
+                .catch(err => console.log(err));
     })
         .catch(err => console.log(err));
 
@@ -52,7 +52,7 @@ function showCard(){
     if (cardCount < 52){
     console.log('clicked button');
     let num = cardCount;
-    $('#cards').append(`<li>${cards[num].value} of ${cards[num].suit}</li>`); 
+    // $('#cards').append(`<li>${cards[num].value} of ${cards[num].suit}</li>`); 
     $('#show_cards').append(`<img class="card" src=${cards[num].image} style='transform:rotate(${rotation[index]}deg); z-index=${cardCount};'></img>`);
     cardCount+=1;
     if (index < 5){
